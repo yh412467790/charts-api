@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title
+  p Hit /chart for the API. This will return a SVG in the form of a string. The API requires these parameters:
+  ul
+    li width: a number
+    li height: a number
+    li data1: Data for the first line. An array of key:value pairs. The key being the X-Axis and value being the Y-Axis.
+    li data2: Data for the second line. An array of key:value pairs. The key being the X-Axis and value being the Y-Axis.
+
+    p Example:&nbsp;&nbsp;&nbsp;
+        a(href='chart?width=750&height=400&data1=[ { "data": 20}, { "date1": 15}, { "date2": 30},{ "date3": 28} ]&data2=[ { "data": 2}, { "date1": 28}, { "date2": 25}, { "date3": 28} ]') /chart?width=750&height=400&data1=[ { "data": 20}, { "date1": 15}, { "date2": 30},{ "date3": 28} ]&data2=[ { "data": 2}, { "date1": 28}, { "date2": 25}, { "date3": 28} ]
+
+
+  h2 For Single Line Chart
+  p Hit /chart/single for the API. This will return a SVG in the form of a string. The API requires these parameters:
+    ul
+      li width: a number
+      li height: a number
+      li data: Data for the first line. An array of key:value pairs. The key being the X-Axis and value being the Y-Axis.
+
+      p Example:&nbsp;&nbsp;&nbsp;
+          a(href='chart/single?width=750&height=400&data=[ { "data": 20}, { "date1": 15}, { "date2": 30},{ "date3": 28} ]') /chart/single?width=750&height=400&data=[ { "data": 20}, { "date1": 15}, { "date2": 30},{ "date3": 28} ]
